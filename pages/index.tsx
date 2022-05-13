@@ -1,13 +1,16 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import {App } from '../src/App'
+import type { NextPage } from "next";
+import { Provider } from "react-redux";
+import { AppMoviesNowPlaying } from "../src";
+import { store } from "../src/store/store";
 
 const HomePage: NextPage = () => {
   return (
-     <>
-      <App/>
-     </>
-  )
-}
+    <>
+      <Provider store={store}>
+        <AppMoviesNowPlaying />
+      </Provider>
+    </>
+  );
+};
 
-export default HomePage
+export default HomePage;
