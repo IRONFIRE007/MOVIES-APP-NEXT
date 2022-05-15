@@ -1,17 +1,12 @@
-import React from 'react'
-import { Provider } from 'react-redux'
-import { AppMoviesUpComing } from '../../src'
-import { store } from '../../src/store/store'
+import React from "react";
+import { AppMoviesUpComing } from "../../src";
 
 const upcoming = () => {
   return (
     <>
-      <Provider store={store}>
-      <AppMoviesUpComing/>
-      </Provider>
+      <AppMoviesUpComing />
     </>
- 
-  )
-}
+  );
+};
 
-export default upcoming
+export default upcoming;

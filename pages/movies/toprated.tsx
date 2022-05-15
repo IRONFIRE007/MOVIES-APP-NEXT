@@ -1,17 +1,12 @@
-import React from 'react'
-import { Provider } from 'react-redux'
-import { AppMoviesTopRated } from '../../src'
-import { store } from '../../src/store/store'
+import React from "react";
+import { AppMoviesTopRated } from "../../src";
 
 const toprated = () => {
   return (
     <>
-     <Provider store={store}>
-     <AppMoviesTopRated/>
-     </Provider>
+      <AppMoviesTopRated />
     </>
-   
-  )
-}
+  );
+};
 
-export default toprated
+export default toprated;

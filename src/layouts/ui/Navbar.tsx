@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { FaSun } from 'react-icons/fa';
 import { useDispatch, useSelector } from "react-redux";
+import { State } from "../../../interfaces/state";
 import { setActiveThemeDart, setDesactiveThemeDart } from "../../reducers/mainReducer";
 
 export const Navbar = () => {
@@ -10,7 +11,8 @@ export const Navbar = () => {
   const dispatch = useDispatch();
   const { theme, isDark } = useTheme();
 
-  const [dark, setDark] = useState(false);
+    const { darkTheme} = useSelector((state: State) => state.state) 
+  const [dark, setDark] = useState(darkTheme);
 
   const handleDarkTheme = () => {
     if (!dark) {
